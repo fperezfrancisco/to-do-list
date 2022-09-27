@@ -1,0 +1,262 @@
+html {
+  padding: 0%;
+  margin: 0%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  border-collapse: collapse;
+  margin: 0%;
+  padding: 0%;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+:root {
+  --primaryColor: #fb8500;
+  --secondaryColor: #ffbe0b;
+  --gray: #e5e5e5;
+  --darkBlue: #023047;
+  --red: #ee6055;
+  --green: #5bbe2a;
+  --neutral: #fb8500;
+  --black: #212529;
+  --white: #f8f9fa;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  border-radius: 0.625rem;
+  font-variant-caps: all-small-caps;
+  font-size: 00.75rem;
+}
+
+button:hover,
+button:active {
+  border: 1px solid var(--black);
+  cursor: pointer;
+  /*pointer-events: visible;*/
+}
+
+/* Header styling */
+header {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.bannerContainer {
+  margin: auto;
+  padding: 0% 5%;
+  max-width: 800px;
+  min-width: 400px;
+  width: 100%;
+  height: auto;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;*/
+}
+
+.todoTitle {
+  text-align: center;
+  font-size: 4rem;
+  font-variant-caps: all-small-caps;
+  margin: 0px 0px 20px 0px;
+}
+
+.itemUpdate {
+  font-size: 0.625rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 200px;
+  height: 30px;
+}
+
+#inputListItem {
+  background-color: var(--white);
+  padding: 5px 15px;
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  border-radius: 0.5rem;
+  margin-right: 15px;
+}
+
+#addBtn {
+  background-color: var(--gray);
+  width: 75px;
+  height: 100%;
+  font-size: 00.75rem;
+  font-variant-caps: all-small-caps;
+  padding: 5px;
+}
+
+/* listBackground */
+
+.listBackground {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 2.5%;
+  overflow-y: scroll;
+}
+
+.listContainer {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.tasksTitle {
+  font-size: 1.5rem;
+  font-variant-caps: all-small-caps;
+  margin: 10px 0px;
+}
+
+.taskUl {
+  margin: unset;
+  padding: unset;
+  list-style-type: none;
+}
+
+.itemBox {
+  height: 45px;
+  width: 100%;
+  padding: 2.5px;
+  margin: 15px 0px;
+  border-radius: 0.75rem;
+  background-color: var(--gray);
+  color: var(--black);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemName {
+  padding: 0px;
+  margin: 0;
+  padding-left: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.options {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.done,
+.edit,
+.remove {
+  display: flex;
+  align-items: center;
+  font-size: 00.625rem;
+  border-radius: 0%;
+  background-color: inherit;
+  padding: 0px 15px;
+  margin: 0px;
+  height: 100%;
+}
+
+.done:hover,
+.edit:hover,
+.remove:hover {
+  cursor: pointer;
+  background-color: var(--black);
+}
+
+.done {
+  color: var(--green);
+}
+
+.edit {
+  color: var(--neutral);
+}
+
+.remove {
+  color: var(--red);
+}
+
+/* Popup styling */
+#editPopup {
+  background-color: var(--darkBlue);
+  color: var(--white);
+  padding: 5%;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.popUptext {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  min-width: 300px;
+  height: auto;
+  margin: auto;
+  padding: 0% 5%;
+}
+
+.editTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-variant-caps: all-small-caps;
+  margin: 0px 0px 20px 0px;
+}
+
+#editItem {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 5px 15px;
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 15px;
+}
+
+.editOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.update,
+.cancel {
+  background-color: var(--gray);
+  width: 100px;
+  height: 100%;
+  font-size: 00.75rem;
+  font-variant-caps: all-small-caps;
+  padding: 5px;
+  margin: 15px;
+}
+
+.closed {
+  display: none;
+}

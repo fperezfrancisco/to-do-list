@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To-do List</title>
+  </head>
+  <body>
+    <header class="todoBanner">
+      <div class="bannerContainer">
+        <h1 class="todoTitle">To-do List</h1>
+        <div class="itemUpdate">
+          <input
+            type="text"
+            id="inputListItem"
+            placeholder="Write your todo list item here..."
+          />
+          <button class="add" id="addBtn">Add</button>
+        </div>
+      </div>
+    </header>
+    <main class="listBackground">
+      <div class="listContainer">
+        <h2 class="tasksTitle">List of Tasks:</h2>
+        <div class="tasksContainer">
+          <ul class="taskUl" id="mainUl">
+            <!--
+            <li class="item itemBox">
+              <p class="itemName">Grocery Shopping</p>
+              <div class="options">
+                <div class="done">Done</div>
+                <div class="edit">Edit</div>
+                <div class="remove">Remove</div>
+              </div>
+            </li>
+          --></ul>
+        </div>
+      </div>
+      <div class="closed" id="editPopup">
+        <div class="popUptext">
+          <h2 class="editTitle">Edit item</h2>
+          <div contenteditable="true" id="editItem"></div>
+          <div class="editOptions">
+            <button class="update" id="updateBtn" onclick="updateEdit()">
+              Update
+            </button>
+            <button class="cancel" id="cancelBtn" onclick="cancel()">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
